@@ -1,0 +1,2 @@
+# MovePlayerToMouseClickLocation
+classroom exercise
