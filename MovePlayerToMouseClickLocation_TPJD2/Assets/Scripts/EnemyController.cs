@@ -1,13 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnakeController : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     private Animator anim;
     private AudioSource audio;
-    public string boolParameterAnimator;
-    
+
+    public string parametroAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,17 +20,16 @@ public class SnakeController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            anim.SetBool(boolParameterAnimator, true);
+            anim.SetBool(parametroAnim, true);
             if (!audio.isPlaying) audio.Play();
         }
     }
-
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            anim.SetBool(boolParameterAnimator, false);
+            anim.SetBool(parametroAnim, false);
             audio.Stop();
         }
     }
