@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Boundary
+public class Boundary2
 {
     public float xMin, xMax;
 }
@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 4f;
     public float initialVolume = 0.4f;
-    public Boundary boundary;
+    public Boundary2 boundary;
 
     private Animator anim;
     private AudioSource audioSource;
